@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paid to Poo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="png" href="./img/poo.png">
+</head>
+<body>
+    <header>
+        <h1>Paid to Poo</h1>
+    </header>
+    <main>
+        <section id="salary-input-section">
+            <input type="number" id="salary-input" placeholder="£ Enter your salary">
+            <select id="salary-type">
+                <option value="hourly">Hourly</option>
+                <option value="annual">Annual</option>
+            </select>
+        </section>
+
+        <section id="timer-controls">
+            <button id="start-button">Start</button>
+            <button id="stop-button">Stop</button>
+        </section>
+
+        <section id="pooing-indicator" style="display: none;">
+            <span id="spinning-poo">💩</span> <span id="pooing-text">Pooing</span>
+        </section>
+        
+        <p id="poo-complete" style="display: none;">Poo Complete!</p>
+
+        
+        <section id="display-area">
+            <p>You've earned: <span id="earned-amount">£0.00</span> during this poo break.</p>
+            <p>That's one expensive shit!</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

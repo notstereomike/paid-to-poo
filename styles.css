@@ -1,0 +1,127 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Header styling */
+header {
+    margin-bottom: 20px;
+}
+
+/* Main content area styling */
+main {
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Salary input section styling */
+#salary-input-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Salary input and select box styling */
+#salary-input, #salary-type {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Timer controls styling */
+#timer-controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Buttons styling */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8B4513;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #A0522D;
+}
+
+/* Display area styling */
+#display-area {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Earned amount highlight styling */
+#earned-amount {
+    font-weight: bold;
+}
+
+/* New styles for disabled buttons */
+button:disabled {
+    background-color: #cccccc; /* Grey color */
+    color: #666666; /* Darker text color for contrast */
+    cursor: not-allowed; /* Change cursor to indicate the button is not clickable */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Apply animation to the display area */
+#display-area {
+    animation: fadeIn 3s;
+}
+
+/* Spinning poo emoji */
+#spinning-poo {
+    display: inline-block;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Animated ellipsis */
+#pooing-text::after {
+    content: '';
+    animation: ellipsis 1.5s infinite;
+}
+
+@keyframes ellipsis {
+    0% { content: ''; }
+    33% { content: '.'; }
+    66% { content: '..'; }
+    100% { content: '...'; }
+}
+
+/* Center the pooing indicator */
+#pooing-indicator {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+    display: inline-block;
+    width: 100%;
+}
+
+/* Add styles for "Poo Complete" text */
+#poo-complete {
+    text-align: center;
+    display: none; /* Initially hidden */
+    margin-top: 20px; /* Adjust as needed */
+}
+
