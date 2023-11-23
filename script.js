@@ -10,7 +10,6 @@ const pooingIndicator = document.getElementById('pooing-indicator');
 const pooingText = document.getElementById('pooing-text');
 const pooComplete = document.getElementById('poo-complete');
 
-
 // Variables to track time and earnings
 let startTime;
 let endTime;
@@ -19,42 +18,38 @@ let earnedAmount;
 // Initial setup
 displayArea.style.display = 'none';
 pooAgainButton.style.display = 'none';
-startButton.disabled = true; // Start button disabled initially
-stopButton.disabled = true; // Stop button always starts disabled
+startButton.disabled = true; 
+stopButton.disabled = true; 
 
-// Event listener for salary input
 salaryInput.addEventListener('input', function() {
     if (salaryInput.value) {
-        startButton.disabled = false; // Enable start button if input is not empty
+        startButton.disabled = false; 
     } else {
-        startButton.disabled = true; // Disable if input is empty
+        startButton.disabled = true; 
     }
 });
 
-// Event listener for the Start button
 startButton.addEventListener('click', function() {
     startTime = new Date();
-    displayArea.style.display = 'none'; // Hide the display area
-    startButton.disabled = true; // Disable the start button
-    stopButton.disabled = false; // Enable the stop button
-    pooingIndicator.style.display = 'inline-block'; // Show the pooing indicator
+    displayArea.style.display = 'none'; 
+    startButton.disabled = true; 
+    stopButton.disabled = false; 
+    pooingIndicator.style.display = 'inline-block'; 
     
     pooingText.textContent = 'Pooing';
 });
 
-// Event listener for the Stop button
 stopButton.addEventListener('click', function() {
     endTime = new Date();
-    const elapsedTime = (endTime - startTime) / 1000; // Time in seconds
+    const elapsedTime = (endTime - startTime) / 1000; 
     calculateEarnings(elapsedTime);
-    displayArea.style.display = 'block'; // Show the display area
-    addPooAgainButton(); // Add the Poo Again? button
-    stopButton.disabled = true; // Disable the stop button after use
-    pooingIndicator.style.display = 'none'; // Hide the pooing indicator
-    pooComplete.style.display = 'block'; // Show "Poo Complete!" text
-    startButton.disabled = true; // Disable the start button
+    displayArea.style.display = 'block'; 
+    addPooAgainButton(); 
+    stopButton.disabled = true; 
+    pooingIndicator.style.display = 'none'; 
+    pooComplete.style.display = 'block'; 
+    startButton.disabled = true; 
 });
-
 
 // Function to calculate earnings
 function calculateEarnings(elapsedTimeInSeconds) {
@@ -68,7 +63,6 @@ function calculateEarnings(elapsedTimeInSeconds) {
     earnedAmountSpan.textContent = `£${earnedAmount.toFixed(2)}`;
 }
 
-// Function to add the Poo Again? button
 function addPooAgainButton() {
     pooAgainButton.textContent = 'Poo Again?';
     pooAgainButton.id = 'poo-again-button';
@@ -77,17 +71,14 @@ function addPooAgainButton() {
     pooAgainButton.addEventListener('click', resetTimer);
 }
 
-
-// Function to reset the timer
 function resetTimer() {
     displayArea.style.display = 'none';
     pooAgainButton.style.display = 'none';
     earnedAmountSpan.textContent = '£0.00';
     pooingIndicator.style.display = 'none';
-    pooComplete.style.display = 'none'; // Hide "Poo Complete!" text
-    startButton.disabled = false; // Enable the start button for a new session
+    pooComplete.style.display = 'none'; 
+    startButton.disabled = false; 
 }
-
 
 // Initial setup
 displayArea.style.display = 'none';
