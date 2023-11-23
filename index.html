@@ -9,11 +9,12 @@
 </head>
 <body>
     <header>
+        <img src="./img/poo.png" alt="Poo Emoji" style="width: 75px; height: 75px;"> <!-- Adjust size as needed -->
         <h1>Paid to Poo</h1>
     </header>
     <main>
         <section id="salary-input-section">
-            <input type="number" id="salary-input" placeholder="£ Enter your salary">
+            <input type="number" id="salary-input" placeholder="£ Enter your salary" inputmode="decimal" pattern="[0-9]*">
             <select id="salary-type">
                 <option value="hourly">Hourly</option>
                 <option value="annual">Annual</option>

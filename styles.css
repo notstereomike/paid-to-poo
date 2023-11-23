@@ -11,9 +11,23 @@ body {
     background-color: #f0f0f0;
 }
 
+body, button, input, select {
+    color: #8B4513; /* Saddle brown color for all text */
+}
+
+
+
 /* Header styling */
 header {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the emoji image */
+header img {
+    margin-bottom: 10px; /* Add some space between the image and the text */
 }
 
 /* Main content area styling */
@@ -34,6 +48,11 @@ main {
     margin: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+#salary-type {
+    background-color: white;
+    border: 1px solid #8B4513;
 }
 
 /* Timer controls styling */
@@ -124,4 +143,13 @@ button:disabled {
     display: none; /* Initially hidden */
     margin-top: 20px; /* Adjust as needed */
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    position: fixed; /* Locks the content in place */
+    left: 0;
+    right: 0;
+}
+
 
